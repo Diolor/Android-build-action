@@ -1,5 +1,5 @@
-FROM circleci/android
+FROM circleci/android:api-28
 
-# COPY entrypoint.sh /entrypoint.sh
+COPY . .
 
-# CMD ["./gradlew"]
+CMD ["./gradlew"]
