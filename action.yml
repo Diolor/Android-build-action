@@ -1,12 +1,12 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'Android build Action'
+description: 'Build & execute android gradle tasks'
+author: 'Dionysis Lorentzos (Diolor)'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  gradle-command:
+    description: 'Gradle commands. E.g: clean assebleDebug'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.gradle-command }}
