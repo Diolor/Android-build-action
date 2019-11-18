@@ -2,11 +2,11 @@ name: 'Android build Action'
 description: 'Build & execute android gradle tasks'
 author: 'Dionysis Lorentzos (Diolor)'
 inputs: 
-  gradle-command:
-    description: 'Gradle commands. E.g: clean assebleDebug'
+  command:
+    description: 'A commands. E.g: ./gradlew clean assebleDebug'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.gradle-command }}
+    - ${{ inputs.command }}
