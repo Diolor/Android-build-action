@@ -1,4 +1,7 @@
 FROM circleci/android:api-28
-# FROM alpine:latest
 
-ENTRYPOINT [ "/bin/bash", "-c", "$1"]
+COPY entrypoint.sh /entrypoint.sh
+
+RUN sudo chmod +x entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
