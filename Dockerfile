@@ -1,7 +1,4 @@
 FROM circleci/android:api-28
+# FROM alpine:latest
 
-COPY . .
-
-RUN ls
-
-CMD ["./gradlew"]
+ENTRYPOINT [ "/bin/bash", "-c", "$1"]
