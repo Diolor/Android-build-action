@@ -2,6 +2,10 @@ name: 'Android build Action'
 description: 'Build & execute android gradle tasks'
 author: 'Dionysis Lorentzos (Diolor)'
 inputs: 
+  api:
+    description: 'Docker's defaults android api level'
+    required: false
+    default: 'api-28'
   command:
     description: 'A commands. E.g: ./gradlew clean assebleDebug'
     required: true
